@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persons SYSTEM "action.dtd">
+<actions>
+	<action path="/main.do" className="action.MainAction">
+	<result type="dispatcher">/main.jsp</result>
+	</action>
+	<action path="/visit/list.do" className="action.ListAction"
+		methodName="execute">
+		<result type="dispatcher">list.jsp</result>
+	</action>
+	<action path="/visit/view.do" className="action.ViewAction">
+		<result>view.jsp</result>
+	</action>
+	<action path="/visit/insert.do" className="action.InsertAction">
+		<result type="redirect">view.jsp</result>
+	</action>
+	<action path="/login/loginform.do" className="action.LoginFormAction">
+		<result type="dispatcher">/login/loginform.jsp</result>
+	</action>
+	<action path="/login/login.do" className="action.LoginAction">
+		<result type="dispatcher"></result>
+	</action>
+	<!-- <action path="/login/signup.do" className="action.SignUpAction">
+		
+	</action> -->
+</actions>

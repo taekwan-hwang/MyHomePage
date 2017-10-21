@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+	<Resource 
+	auth="Container" 
+	name="jdbc/mysql_hr" 
+	type="javax.sql.DataSource" 
+	driverClassName="com.mysql.jdbc.Driver"
+	factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+	url="jdbc:mysql://localhost:3306/hr"
+	username="root"
+	password="050505s"
+	initialSize="5" maxActive="5" maxIdle="5" maxWait="0"
+	/>
+	<!-- auth:주인, container:톰캣 -->
+</Context>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persons SYSTEM "action.dtd">
+<actions>
+	<action path="/visit/list.do" className="action.ListAction"
+		methodName="execute">
+		<result type="dispatcher">list.jsp</result>
+	</action>
+	<action path="/visit/view.do" className="action.ViewAction">
+		<result>view.jsp</result>
+	</action>
+	<action path="/visit/insert.do" className="action.InsertAction">
+		<result type="redirect">view.jsp</result>
+	</action>
+	<action path="/index.do" className="action.IndexAction">
+		<result type="dispatcher">index.html</result>
+	</action>
+</actions>
