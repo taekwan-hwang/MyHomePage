@@ -15,12 +15,11 @@
 		<input type="button" value="login"
 			onclick="location.href='/login/loginform.do'" />
 		<input type="button" value="sign up"
-			onclick="location.href='/login/signup.do'"/>
+			onclick="location.href='/login/signupform.do'"/>
 	</c:if>
 	<c:if test="${sessionScope.user!=null }">
 		<ul>
-			<li>${sessionScope.user.id }</li>
-			<li>${sessionScope.user.pwd }</li>
+			<li>${sessionScope.user.name } hi</li>
 		</ul>
 		<input type="button" value="logout"
 			onclick="location.href='/login/logout.do'" />

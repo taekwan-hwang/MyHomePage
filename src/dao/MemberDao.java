@@ -45,13 +45,14 @@ public class MemberDao {
 	public void signUp(String id, String pwd, String name){
 		MemberVo temp = new MemberVo();
 		temp.setId(id);
-		temp.setName(name);
 		temp.setPwd(pwd);
-		System.out.println(id);
+		temp.setName(name);
 		SqlSession sqlsession = factory.openSession();
 		System.out.println(temp.getId());
 		
-		sqlsession.insert("member.sign", temp);
+		sqlsession.insert("member.signupmember", temp);
+		//MyBatis is not auto-commit, so need commit method invoke
+		sqlsession.commit();
 		sqlsession.close();
 	}
 }
