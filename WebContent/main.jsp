@@ -23,7 +23,7 @@
 		</ul>
 		<input type="button" value="logout"
 			onclick="location.href='/login/logout.do'" />
-			<input type="button" value="post" onclick="location.href='/post/list.do'"/>
+		<input type="button" value="list" onclick="location.href='/post/list.do'"/>
 	</c:if>
 </body>
 </html>

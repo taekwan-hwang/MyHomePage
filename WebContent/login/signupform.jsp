@@ -10,6 +10,22 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 	function send(f) {
+		
+		if(f.id.value==''){
+			alert('id is not null');
+			f.id.focus();
+			return;
+		}
+		if(f.pwd.value==''){
+			alert('pwd is not null');
+			f.pwd.focus();
+			return;
+		}
+		if(f.name.value==''){
+			alert('name is not null');
+			f.name.focus();
+			return;
+		}
 		f.submit();
 	}
 </script>

@@ -15,12 +15,6 @@ public class LoginAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		try {
-			request.setCharacterEncoding("utf-8");
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		String isSave = request.getParameter("save");
@@ -40,6 +34,8 @@ public class LoginAction implements Action {
 			request.getSession().setAttribute("user", vo);
 			return "/main.do";
 		} else {
+			Cookie ck = new Cookie("isLoginSuccess", "false");
+			ck.setMaxAge(5);
 			System.out.println("vo is null");
 			return "/login/loginform.do";
 		}

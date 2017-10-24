@@ -8,12 +8,18 @@
 		<result type="dispatcher">/login/loginform.jsp</result>
 	</action>
 	<action path="/login/login.do" className="action.LoginAction">
-		<result type="dispatcher"/>
+		<result type="redirect"/>
 	</action>
 	<action path="/login/signupform.do" className="action.SignUpFormAction">
 		<result type="dispatcher">/login/signupform.jsp</result>
 	</action>
 	<action path="/login/signup.do" className="action.SignUpAction">
 		<result type="redirect">/main.jsp</result>
+	</action>
+	<action path="/login/logout.do" className="action.LogoutAction">
+		<result type="dispatcher">/main.jsp</result>
+	</action>
+	<action path="/post/list.do" className="acion.PostListAction">
+		<result type="dispatcher">/post/list.jsp</result>
 	</action>
 </actions>

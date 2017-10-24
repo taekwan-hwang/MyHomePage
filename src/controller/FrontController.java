@@ -104,7 +104,7 @@ public class FrontController extends HttpServlet {
 		
 		try{//동적 클래스 선언
 			Class c = Class.forName(className);
-			
+
 			//동적 instance 생성
 			Object obj = c.newInstance();
 			

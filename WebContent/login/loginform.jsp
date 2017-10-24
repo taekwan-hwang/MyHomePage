@@ -26,6 +26,9 @@
 		<input type='hidden' name="save" value='n'/>
 		<table border="1">
 			<caption>::login::</caption>
+			<c:if test="${sessionScope.isLoginSuccess =='false'}">
+			id or pwd is not corrected
+			</c:if>
 			<tr>
 				<th>id</th>
 				<td>
