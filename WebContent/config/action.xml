@@ -19,7 +19,7 @@
 	<action path="/login/logout.do" className="action.LogoutAction">
 		<result type="dispatcher">/main.jsp</result>
 	</action>
-	<action path="/post/list.do" className="acion.PostListAction">
+	<action path="/post/list.do" className="action.PostsListAction">
 		<result type="dispatcher">/post/list.jsp</result>
 	</action>
 </actions>
