@@ -102,16 +102,10 @@ public class FrontController extends HttpServlet {
 		String resultType = map.get("resultType");
 		String resultPage = map.get("resultPage");
 		
-		try{//동적 클래스 선언
+		try{//Reflection
 			Class c = Class.forName(className);
-
-			//동적 instance 생성
 			Object obj = c.newInstance();
-			
-			//동적 method 선언
 			Method method = c.getDeclaredMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);
-			
-			//동적 method 호출
 			String result = (String)method.invoke(obj, request, response);
 			
 			if(result.equals("success")){

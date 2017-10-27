@@ -1,11 +1,7 @@
 package dao;
 
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-
-import com.mysql.jdbc.Statement;
 
 import service.MyBatisConnector;
 import vo.MemberVo;
@@ -28,7 +24,6 @@ public class MemberDao {
 
 	public MemberVo found(String id, String pwd) {
 		// TODO Auto-generated method stub
-		System.out.println(id);
 		MemberVo vo = null;
 		MemberVo temp = new MemberVo();
 		temp.setId(id);

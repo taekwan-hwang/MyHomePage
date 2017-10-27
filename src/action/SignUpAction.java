@@ -1,11 +1,9 @@
 package action;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.MemberDao;
-import vo.MemberVo;
 
 public class SignUpAction implements Action {
 
