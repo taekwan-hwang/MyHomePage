@@ -9,6 +9,11 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+window.onload=function(){
+	<c:if test="${sessionScope.loginResult=='false'}">
+		$('.main').text('id 또는 password가 일치하지 않습니다.');
+	</c:if>
+}
 	function send(f) {
 		if (f.id.value == '' || f.pwd.value == '') {
 			$(".loginTableCaption").text('id 또는 비밀번호가 공백입니다.');
@@ -25,10 +30,6 @@
 </script>
 </head>
 <body>
-	<h1>${sessionScope.loginResult }</h1>
-	<c:if test="${sessionScope.loginResult=='false' }">
-		<h1>id또는 비밀번호가 일치하지 않습니다.</h1>
-	</c:if>
 	<h1 class="main">login page</h1>
 	<form action="/login/login.do" method="post">
 		<input type='hidden' name="save" value='n' />

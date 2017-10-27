@@ -9,6 +9,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
 	<h1>메인페이지</h1>
 	<c:if test="${sessionScope.user==null }">

@@ -12,6 +12,8 @@ public class LoginAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
+		request.getSession().invalidate();
+		response.setContentType("text/html");
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		String isSave = request.getParameter("save");
@@ -29,12 +31,11 @@ public class LoginAction implements Action {
 		if (vo != null) {
 			request.getSession().setMaxInactiveInterval(10);// 세션의 유지 시간
 			request.getSession().setAttribute("user", vo);
+			request.getSession().setAttribute("loginResult", "true");
 			return "/main.do";
 		} else {
-			Cookie loginResult_ck = new Cookie("loginResult", "false");
-			loginResult_ck.setMaxAge(20);
-			loginResult_ck.setPath("/");
-			response.addCookie(loginResult_ck);
+			request.getSession().setMaxInactiveInterval(10);
+			request.getSession().setAttribute("loginResult", "false");
 			System.out.println("vo is null");
 			return "/login/loginform.do";
 		}
