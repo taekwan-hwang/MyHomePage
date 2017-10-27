@@ -2,7 +2,7 @@
 <!ELEMENT actions (action+)>
 	<!ELEMENT action (result)>
 	<!ATTLIST action path CDATA #REQUIRED>
-	<!ATTLIST action className CDATA #REQUIRED>
+	<!ATTLIST action className CDATA #IMPLIED>
 	<!ATTLIST action methodName CDATA #IMPLIED>
 		<!ELEMENT result (#PCDATA)>
 		<!ATTLIST result type CDATA #IMPLIED>
