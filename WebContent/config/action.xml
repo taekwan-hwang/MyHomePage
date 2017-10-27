@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE persons SYSTEM "action.dtd">
 <actions>
-	<action path="/main.do" className="action.MainAction">
+	<action path="/main.do">
 	<result type="dispatcher">/main.jsp</result>
 	</action>
-	<action path="/login/loginform.do" className="action.LoginFormAction">
+	<action path="/login/loginform.do">
 		<result type="dispatcher">/login/loginform.jsp</result>
 	</action>
 	<action path="/login/login.do" className="action.LoginAction">
 		<result type="redirect"/>
 	</action>
-	<action path="/login/signupform.do" className="action.SignUpFormAction">
+	<action path="/login/signupform.do">
 		<result type="dispatcher">/login/signupform.jsp</result>
 	</action>
 	<action path="/login/signup.do" className="action.SignUpAction">
@@ -22,7 +22,7 @@
 	<action path="/post/list.do" className="action.PostsListAction">
 		<result type="dispatcher">/post/list.jsp</result>
 	</action>
-	<action path="post/insert_form.do" className="action.PostInsertForm">
+	<action path="post/insert_form.do">
 		<result type="dispatcher">/post/insert_form.jsp</result>
 	</action>
 </actions>

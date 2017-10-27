@@ -56,7 +56,9 @@ public class FrontController extends HttpServlet {
 				if(methodName==null){
 					methodName="execute";
 				}
-				
+				if(className==null){
+					className="action.PassAction";
+				}
 				Element result=action.getChild("result");
 				String resultType = result.getAttributeValue("type");
 				
