@@ -22,7 +22,10 @@
 	<action path="/post/list.do" className="action.PostsListAction">
 		<result type="dispatcher">/post/list.jsp</result>
 	</action>
-	<action path="post/insert_form.do">
+	<action path="/post/insert_form.do">
 		<result type="dispatcher">/post/insert_form.jsp</result>
+	</action>
+	<action path="/post/append.do" className="action.PostAppendAction">
+		<result type="dispatcher">/post/list.jsp</result>
 	</action>
 </actions>
