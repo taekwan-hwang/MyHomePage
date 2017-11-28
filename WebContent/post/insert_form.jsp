@@ -24,9 +24,41 @@
 </head>
 <body>
 <form action="/post/append.do" method="post">
-	<input name="head" type="text"/>
-	<input name="content" type="text"/>
-	<input type="button" value="등록" onclick="send(this.form)"/>
+	<table>
+	<tr>
+		<td class="list_articles">
+			<table>
+				<tbody>
+					<tr>
+						<td width="15%"><font class="write_title">제목</font></td>
+						<td width="85%"><input type="text" id="write_subject" class="write_subject"/></td>
+					</tr>
+					<tr>
+						<td width="15%"><font class="write_title">작성자</font></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<textarea id="write_content" class="write_content"></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>		
+		</td>
+	</tr>
+	<tr>
+		<td class="list_articles">
+			<table>
+				<tbody>
+					<tr>
+						<td align="right">
+							<font class="common_but">글쓰기</font> | <font class="common_but">목록</font>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>
 </form>
 
 </body>
